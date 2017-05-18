@@ -10,16 +10,23 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
-body {
-  margin: 0;
-  color: #244751;
-  background-color: #eee;
+#body{
+  background-color: #8c92ac;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.container{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 50px;
+  padding-bottom: 100%;
+  margin: 0 auto 0;
+  background-color: white;
+  width: 600px;
+  height: 100%;
+
+}
+
+.new-tweet{
+  width: 450px;
+  margin: 80px auto 0;
+}

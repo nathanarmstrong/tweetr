@@ -1,0 +1,36 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+#nav-bar {
+  padding-left: 2em;
+  height: 80px;
+  margin: 0;
+  color: #244751;
+  background-color: #00a087;
+
+}
+#nav-bar .logo {
+  padding-right: 10px;
+  width: 90px;
+  height: 80px;
+}
+
+#nav-bar .header {
+  color: #e8fdff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 45px;
+  position: relative;
+  bottom: 35%;
+
+}
+
+
+
