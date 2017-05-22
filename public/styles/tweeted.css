@@ -5,7 +5,7 @@ html {
   box-sizing: inherit;
 }
 
-article{
+.theTweet{
   padding-left: 10px;
   padding-right: 10px;
   border: 2px solid #E0E0E0;
@@ -15,7 +15,7 @@ article{
   background-color: #E8E8E8;
 }
 
- article:hover{
+ .theTweet:hover{
   opacity: 0.8;
   filter: alpha(opacity = 10);
 }
@@ -26,7 +26,7 @@ header{
   height: 80px;
 }
 
-article img{
+.theTweet img{
   max-width: 60px;
   max-height: 60px;
   float:left;
@@ -35,7 +35,7 @@ article img{
 
 }
 
-article .name{
+.theTweet .name{
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   font-size: 25px;
@@ -45,13 +45,13 @@ article .name{
   color: #00a087;
 }
 
-article .smallname{
+.theTweet .smallname{
   padding-top: 5%;
   float: right;
   color: #bebebe;
 }
 
-article #tweetTxt{
+.theTweet #tweetTxt{
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: lighter;
@@ -64,13 +64,27 @@ article #tweetTxt{
   color: #474747;
 }
 
-article footer p{
+.theTweet .tweet-footer{
+  margin-right: 0px;
+  padding: 1px;
+  max-width: 15%;
+  margin: 5px 0px 5px 5px;
   font-size: 10px;
-  margin-bottom: 10px;
-  margin-left: 5px;
   color: #999999;
 }
 
+.theTweet #icons{
+  display: none;
+  float: right;
+}
 
+
+.theTweet #icons i{
+  margin-left: 5px;
+}
+
+.theTweet:hover #icons{
+  display: block;
+}
 
 

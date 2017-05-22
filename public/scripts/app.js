@@ -5,26 +5,30 @@ $( document ).ready(function() {
 
 
   function createTweetElement(object) {
+
     let name = object.user.name
     let avatar = object.user.avatars.regular
     let handle = object.user.handle
     let tweetContent = object.content.text
     let converted = object.created_at /1000
     let day = ((Date.now() - object.created_at) /1000) /86000;
-    console.log(avatar)
-    const $newTweets = $(`<article>
+
+    const $newTweets = $(`<article class='theTweet'>
                           <header>
                             <img src=${avatar}>
-                              <span class="name">${name}</span>
-                              <span class="smallname">${handle}</span>
+                               <span class='name'>${name}</span>
+                                <span class='smallname'>${handle}</span>
                               </header>
                               <body>
-                              <p id="tweetTxt">${tweetContent}</p>
+                                <p id='tweetTxt'>${tweetContent}</p>
                               </body>
                               <footer>
-                              <p class="tweet-footer">${Math.round(day)} Days old</p>
+                                <span class='tweet-footer'>${Math.round(day)} Days old</span>
+                                <i id='icons' class='material-icons'>flag</i>
+                                <i id='icons' class='material-icons'>repeat</i>
+                                <i id='icons' class='material-icons'>favorite</i>
                               </footer>
-                              </article>`)
+                            </article>`)
     return $newTweets;
   }
 
@@ -59,10 +63,12 @@ $( document ).ready(function() {
         });
         $.ajax({
           method: 'GET',
-          url: '/tweets'
+          url: '/tweets',
         }).done(function(text) {
           tweetDB = text;
           renderTweets(tweetDB);
+          $('#text').val('');
+          $('.counter').text(140);
         });
       }
     });
