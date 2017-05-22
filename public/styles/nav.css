@@ -7,7 +7,6 @@ html {
 }
 
 
-
 #nav-bar {
   padding-left: 2em;
   height: 80px;
@@ -30,6 +29,10 @@ html {
   position: relative;
   bottom: 35%;
 
+}
+
+#body{
+  background-color: #E8E8E8;
 }
 
 

@@ -10,23 +10,15 @@ html {
   box-sizing: inherit;
 }
 
-#body{
-  background-color: #8c92ac;
-}
 
 .container{
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 50px;
-  padding-bottom: 100%;
+  padding-bottom: 280px;
   margin: 0 auto 0;
   background-color: white;
   width: 600px;
   height: 100%;
 
-}
-
-.new-tweet{
-  width: 450px;
-  margin: 80px auto 0;
 }
