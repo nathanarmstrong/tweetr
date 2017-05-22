@@ -24,9 +24,10 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Screenshots
 
-!["description"](url)
-!["description"](url)
-!["description"](url)
-!["description"](url)
-!["description"](url)
-!["description"](url)
+!["my nav bar"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/nav.png)
+!["compose button hover"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/compose.png)
+!["compose the tweet"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/compose-tweet.png)
+!["no text alert"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/no-text.png)
+!["too much text"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/tomuchalert.png)
+!["list of tweets"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/tweets.png)
+!["tweets hover"](https://github.com/nathanarmstrong/tweetr/blob/master/public/images/tweet-hover.png)
