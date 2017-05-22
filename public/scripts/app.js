@@ -2,24 +2,24 @@ $( document ).ready(function() {
   console.log("ready")
 
 
-//  var form = document.forms[0]
+ var form = document.forms[0]
 
-// form.addEventListener("submit", function(event) {
-//   event.preventDefault();
-//     $.ajax({
-//     method: "GET",
-//     url: "/tweets"
-//   })
-//   var text = document.querySelector("#text").value;
-//   var article = document.createElement("article");
-//   $.getJSON( "/tweets", function(data) {
-//     console.log($(data).serialize())
-//     article.innerHTML = '<header><img class="logo" src="/images/bird.png" ><span class="name">NAME!!!</span><span class="smallname">@name</span></header><body><p id="tweetTxt">'+text+'</p></body><footer>X days old</footer>';
-//   });
-//   $(article).appendTo($("#postedtweet") );
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+    $.ajax({
+    method: "GET",
+    url: "/tweets"
+  })
+  var text = document.querySelector("#text").value;
+  var article = document.createElement("article");
+  $.getJSON( "/tweets", function(data) {
+    console.log($(data).serialize())
+    article.innerHTML = '<header><img class="logo" src="/images/bird.png" ><span class="name">NAME!!!</span><span class="smallname">@name</span></header><body><p id="tweetTxt">'+text+'</p></body><footer>X days old</footer>';
+  });
+  $(article).appendTo($("#postedtweet") );
 
-//   console.log(article);
-// })
+  console.log(article);
+})
 
 function createTweetElement(object) {
   let name = object.user.name
@@ -42,7 +42,28 @@ function renderTweets(data) {
   });
 }
 
+const tweetDB;
+$function() {
+  $('.new-tweet').hide()
+  $('button').click(function() {
+    $('.new-tweet').slideToggle(1000)
+    $('textarea').select()
+  });
 
+  $('#submit').click(function() {
+    event.preventDefault();
+    if($('textarea').val() === ''){
+      alert('no content in textbox');
+    } else if ($('textarea').val().length > 140) {
+    } else {
+      $ajax({
+        methof:'POST',
+        url: '/tweets',
+        data: $('form').serialize(),
+      })
+    }
+  })
+}
 
 
 
