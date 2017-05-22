@@ -29,10 +29,18 @@ function createTweetElement(object) {
   let converted = object.created_at /1000
   let day = ((date.now() = object.created_at) /1000) /86000;
 
-
+  const $newTweets = $(`<article class = 'tweet-history'><header class ='tweet-history><image class='tweet-history' src=${avatar}><span class="name">${name}</span><span class="smallname">${handler}</span></header><body><p id="tweetTxt">${tweetContent}</p></body><footer><p class="tweet-footer">${Math.round(days)} Days old</p><i class ="material-icons>flag</i><i class="material-icons>repeat</i><i class ="material-icons>favorite</i></footer></article>`)
+  return $newTweets;
 }
 
-
+function renderTweets(data) {
+  $.each(data, function(index, value) {
+    let $tweet = createTweetElement(value)
+    $(function() {
+      $('.tweet-holder').prepend($tweet)
+    });
+  });
+}
 
 
 
