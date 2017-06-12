@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  console.log("ready")
+loadTweets()
 
 
 
@@ -60,21 +60,21 @@ $( document ).ready(function() {
           method:'POST',
           url: '/tweets',
           data: $('form').serialize()
-        });
-        $.ajax({
-          method: 'GET',
-          url: '/tweets',
         }).done(function(text) {
-          tweetDB = text;
-          renderTweets(tweetDB);
           $('#text').val('');
           $('.counter').text(140);
+          loadTweets();
         });
       }
     });
   });
 
   function loadTweets(){
-  }loadTweets()
+    $.ajax({
+          method: 'GET',
+          url: '/tweets',
+        }).done(renderTweets)
+        }
+  
 
 });

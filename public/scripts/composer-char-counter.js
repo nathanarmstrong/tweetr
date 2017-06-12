@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-  console.log("ready")
 
 
   $(".new-tweet textarea").keyup(function() {
@@ -12,7 +11,6 @@ $( document ).ready(function() {
     } else{
       $(".new-tweet .counter").css("color", "black");
     }
-    console.log(this);
     return;
   });
 
